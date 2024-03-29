@@ -10,6 +10,4 @@ import { PersonTableComponent } from './components/person-table/person-table.com
 })
 export class AppComponent {
   name = 'Stavros';
-
-
 }
