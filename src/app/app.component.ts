@@ -9,5 +9,21 @@ import { PersonTableComponent } from './components/person-table/person-table.com
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  name = 'Stavros';
+  name = 'Steve';
+
+  person0 = {
+    givenName: 'Steve',
+    surName: 'Krz',
+    age: 25,
+    email: 'stav@aueb.gr',
+    address: 'Patision'
+  };
+
+  person1 = {
+      givenName: 'John',
+      surName: 'James',
+      age: 39,
+      email: 'john@aueb.gr',
+      address: 'New York, USA'
+    } 
 }
