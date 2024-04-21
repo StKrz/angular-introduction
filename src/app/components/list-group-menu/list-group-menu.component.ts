@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MenuItem } from '../../shared/interfaces/menu-items';
+import { MenuItem } from '../../../../src/app/shared/interfaces/menu-items';
 
 @Component({
   selector: 'app-list-group-menu',
@@ -20,23 +20,27 @@ export class ListGroupMenuComponent {
     },
     {
       text: 'Component Output Example',
-      routerLink: 'component-output-example'
+      routerLink: 'component-output-example',
     },
     {
       text: 'Template Driven Form Example',
-      routerLink: 'template-driven-form-example'
+      routerLink: 'template-driven-form-example',
     },
     {
       text: 'Reactive Form Example',
       routerLink: 'reactive-form-example',
     },
     {
-      text: 'Http Client Example',
-      routerLink: 'http-client-example'
+      text: 'HTTP Client Example',
+      routerLink: 'http-client-example',
     },
     {
       text: 'User Registration Example',
-      routerLink: 'user-registration-example'
-    }
+      routerLink: 'user-registration-example',
+    },
+    {
+      text: 'Restricted Content Example',
+      routerLink: 'restricted-content-example',
+    },
   ];
 }

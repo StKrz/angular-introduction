@@ -7,9 +7,11 @@ import { SimpleDatatableExampleComponent } from './components/simple-datatable-e
 import { ComponentOutputExampleComponent } from './components/component-output-example/component-output-example.component';
 import { TemplateDrivenFormExampleComponent } from './components/template-driven-form-example/template-driven-form-example.component';
 import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
-import { EpersonReactiveFormComponent } from './components/eperson-reactive-form/eperson-reactive-form.component';
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { RestrictedContentExampleComponent } from './components/restricted-content-example/restricted-content-example.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { authGuard } from './shared/guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -27,11 +29,11 @@ export const routes: Routes = [
   },
   {
     path: 'component-output-example',
-   component: ComponentOutputExampleComponent
+    component: ComponentOutputExampleComponent,
   },
-  { 
+  {
     path: 'template-driven-form-example',
-   component: TemplateDrivenFormExampleComponent
+    component: TemplateDrivenFormExampleComponent,
   },
   {
     path: 'reactive-form-example',
@@ -39,11 +41,17 @@ export const routes: Routes = [
   },
   {
     path: 'http-client-example',
-    component: HttpClientExampleComponent
+    component: HttpClientExampleComponent,
   },
   {
     path: 'user-registration-example',
-    component: UserRegistrationComponent
+    component: UserRegistrationComponent,
   },
-  { path: '', component: WelcomeComponent }
+  {
+    path: 'restricted-content-example',
+    component: RestrictedContentExampleComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'login', component: UserLoginComponent },
+  { path: '', component: WelcomeComponent },
 ];
